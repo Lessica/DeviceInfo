@@ -23,6 +23,9 @@
 		CC811BE72690C3E300CD285C /* TransformedRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BE62690C3E300CD285C /* TransformedRecord.swift */; };
 		CC811BE92690C95B00CD285C /* AggregatedRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BE82690C95A00CD285C /* AggregatedRecord.swift */; };
 		CC811BEB2690CB5F00CD285C /* RecordTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BEA2690CB5F00CD285C /* RecordTemplate.swift */; };
+		CC811BF426918A7A00CD285C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC811BF626918A7A00CD285C /* Localizable.strings */; };
+		CC811BF926918AAB00CD285C /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BF826918AAA00CD285C /* BartyCrouch.swift */; };
+		CC811BFC26918AEC00CD285C /* RecordKeys.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC811BFE26918AEC00CD285C /* RecordKeys.strings */; };
 		CC96F9642677BB4E00CB55E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96F9632677BB4E00CB55E9 /* AppDelegate.swift */; };
 		CC96F9662677BB4E00CB55E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96F9652677BB4E00CB55E9 /* ViewController.swift */; };
 		CC96F9682677BB4F00CB55E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC96F9672677BB4F00CB55E9 /* Assets.xcassets */; };
@@ -82,6 +85,13 @@
 		CC811BE62690C3E300CD285C /* TransformedRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformedRecord.swift; sourceTree = "<group>"; };
 		CC811BE82690C95A00CD285C /* AggregatedRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedRecord.swift; sourceTree = "<group>"; };
 		CC811BEA2690CB5F00CD285C /* RecordTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTemplate.swift; sourceTree = "<group>"; };
+		CC811BF126918A6B00CD285C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		CC811BF326918A7200CD285C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CC811BF526918A7A00CD285C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CC811BF726918A7D00CD285C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CC811BF826918AAA00CD285C /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
+		CC811BFD26918AEC00CD285C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RecordKeys.strings"; sourceTree = "<group>"; };
+		CC811BFF26918AEF00CD285C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RecordKeys.strings; sourceTree = "<group>"; };
 		CC96F9602677BB4E00CB55E9 /* DeviceInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC96F9632677BB4E00CB55E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC96F9652677BB4E00CB55E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +210,7 @@
 				CC811BED2690D33800CD285C /* Device */,
 				CC811BEC2690D32700CD285C /* Records */,
 				CC96F9632677BB4E00CB55E9 /* AppDelegate.swift */,
+				CC811BF826918AAA00CD285C /* BartyCrouch.swift */,
 				CC811BD82690AEE300CD285C /* GenericError.swift */,
 				CC96F9652677BB4E00CB55E9 /* ViewController.swift */,
 				CC811B1726909C6000CD285C /* newfactorydata.sh */,
@@ -207,6 +218,8 @@
 				CC96F9692677BB4F00CB55E9 /* Main.storyboard */,
 				CC96F96C2677BB4F00CB55E9 /* Info.plist */,
 				CC96F96D2677BB4F00CB55E9 /* DeviceInfo.entitlements */,
+				CC811BF626918A7A00CD285C /* Localizable.strings */,
+				CC811BFE26918AEC00CD285C /* RecordKeys.strings */,
 			);
 			path = DeviceInfo;
 			sourceTree = "<group>";
@@ -318,6 +331,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = CC96F9572677BB4E00CB55E9;
 			productRefGroup = CC96F9612677BB4E00CB55E9 /* Products */;
@@ -336,6 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC96F9682677BB4F00CB55E9 /* Assets.xcassets in Resources */,
+				CC811BFC26918AEC00CD285C /* RecordKeys.strings in Resources */,
+				CC811BF426918A7A00CD285C /* Localizable.strings in Resources */,
 				CC96F96B2677BB4F00CB55E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +375,7 @@
 				CC811BDD2690BFCE00CD285C /* DeviceError.swift in Sources */,
 				CC811BE72690C3E300CD285C /* TransformedRecord.swift in Sources */,
 				CC811BD92690AEE400CD285C /* GenericError.swift in Sources */,
+				CC811BF926918AAB00CD285C /* BartyCrouch.swift in Sources */,
 				CC811BE32690C02100CD285C /* ConnectedDevice.swift in Sources */,
 				CC811B162690959600CD285C /* Device.swift in Sources */,
 				CC811BE92690C95B00CD285C /* AggregatedRecord.swift in Sources */,
@@ -381,10 +398,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CC811BF626918A7A00CD285C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC811BF526918A7A00CD285C /* zh-Hans */,
+				CC811BF726918A7D00CD285C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CC811BFE26918AEC00CD285C /* RecordKeys.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC811BFD26918AEC00CD285C /* zh-Hans */,
+				CC811BFF26918AEF00CD285C /* en */,
+			);
+			name = RecordKeys.strings;
+			sourceTree = "<group>";
+		};
 		CC96F9692677BB4F00CB55E9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CC96F96A2677BB4F00CB55E9 /* Base */,
+				CC811BF126918A6B00CD285C /* zh-Hans */,
+				CC811BF326918A7200CD285C /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -424,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -486,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

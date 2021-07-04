@@ -1,0 +1,11 @@
+/* DeviceError */
+"Could not connect to lockdownd (%d)" = "";
+
+/* GenericError */
+"Not a directory: \"%@\"." = "";
+
+/* GenericError */
+"Not a package: \"%@\"." = "";
+
+/* GenericError */
+"Not a regular file: \"%@\"." = "";

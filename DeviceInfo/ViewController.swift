@@ -7,6 +7,12 @@
 
 import Cocoa
 
+extension NSUserInterfaceItemIdentifier {
+    
+    static let columnKey   = NSUserInterfaceItemIdentifier("ColKey")
+    static let columnValue = NSUserInterfaceItemIdentifier("ColValue")
+}
+
 final class ViewController: NSViewController {
     
     @IBOutlet weak var outlineView: NSOutlineView!
@@ -122,13 +128,17 @@ extension ViewController: NSOutlineViewDataSource, NSOutlineViewDelegate {
     }
     
     func outlineView(_ outlineView: NSOutlineView, objectValueFor tableColumn: NSTableColumn?, byItem item: Any?) -> Any? {
-        if tableColumn?.identifier.rawValue == "ColKey" {
+        if tableColumn?.identifier == .columnKey {
             if let item = item as? ConnectedDevice {
-                return item.name ?? NSLocalizedString("[Locked]", comment: "ConnectedDevice")
+                return NSLocalizedString(
+                    item.name ?? "[Locked]",
+                    tableName: "RecordKeys",
+                    comment: "ConnectedDevice #bc-ignore!"
+                )
             } else if let item = item as? AggregatedRecord {
                 return item.key
             }
-        } else if tableColumn?.identifier.rawValue == "ColValue" {
+        } else if tableColumn?.identifier == .columnValue {
             if let item = item as? ConnectedDevice {
                 return item.udid
             } else if let item = item as? AggregatedRecord {

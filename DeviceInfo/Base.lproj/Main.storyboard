@@ -708,21 +708,21 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="DeviceInfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="404"/>
+                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="404"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uTc-l5-oP4">
-                                <rect key="frame" x="40" y="40" width="400" height="272"/>
+                                <rect key="frame" x="20" y="20" width="400" height="312"/>
                                 <subviews>
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ab-Ig-Hdo">
-                                        <rect key="frame" x="0.0" y="32" width="400" height="240"/>
+                                        <rect key="frame" x="0.0" y="32" width="400" height="280"/>
                                         <clipView key="contentView" ambiguous="YES" id="RY6-1l-Vig">
-                                            <rect key="frame" x="1" y="1" width="398" height="238"/>
+                                            <rect key="frame" x="1" y="1" width="398" height="278"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <outlineView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveName="MainOutlineView" rowHeight="24" usesAutomaticRowHeights="YES" headerView="PWd-ko-TVM" viewBased="YES" indentationPerLevel="13" autosaveExpandedItems="YES" autoresizesOutlineColumn="YES" outlineTableColumn="zVJ-oy-Au4" id="W2t-uB-lcB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="409" height="210"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="250"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="17" height="0.0"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -768,7 +768,7 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                         </tableColumn>
-                                                        <tableColumn identifier="ColValue" width="240" minWidth="120" maxWidth="1000" id="bpJ-Wp-w14">
+                                                        <tableColumn identifier="ColValue" width="229" minWidth="120" maxWidth="1000" id="bpJ-Wp-w14">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="UDID or Value">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -781,11 +781,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="kfm-f3-SGQ">
-                                                                    <rect key="frame" x="163" y="0.0" width="237" height="28"/>
+                                                                    <rect key="frame" x="163" y="0.0" width="226" height="28"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ns8-oT-iH6">
-                                                                            <rect key="frame" x="0.0" y="7" width="237" height="15"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="226" height="15"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="aA2-xP-JfA">
                                                                                 <font key="font" size="13" name="Menlo-Regular"/>
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -819,8 +819,8 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="Nl0-eg-YdM"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="u6T-Os-1Ln"/>
                                         </constraints>
-                                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="dBs-hm-n0N">
-                                            <rect key="frame" x="1" y="223" width="398" height="16"/>
+                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="dBs-hm-n0N">
+                                            <rect key="frame" x="1" y="243" width="398" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="HmE-OQ-OFP">
@@ -828,7 +828,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <tableHeaderView key="headerView" wantsLayer="YES" id="PWd-ko-TVM">
-                                            <rect key="frame" x="0.0" y="0.0" width="409" height="28"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableHeaderView>
                                     </scrollView>
@@ -878,10 +878,10 @@
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Vh6-AX-Rbi" firstAttribute="bottom" secondItem="uTc-l5-oP4" secondAttribute="bottom" constant="20" symbolic="YES" id="5Yu-f6-LAS"/>
-                            <constraint firstItem="Vh6-AX-Rbi" firstAttribute="trailing" secondItem="uTc-l5-oP4" secondAttribute="trailing" constant="20" symbolic="YES" id="UZy-4g-Fpk"/>
-                            <constraint firstItem="uTc-l5-oP4" firstAttribute="top" secondItem="Vh6-AX-Rbi" secondAttribute="top" constant="20" symbolic="YES" id="VJ3-Me-s1s"/>
-                            <constraint firstItem="uTc-l5-oP4" firstAttribute="leading" secondItem="Vh6-AX-Rbi" secondAttribute="leading" constant="20" symbolic="YES" id="zKK-S6-uQN"/>
+                            <constraint firstItem="Vh6-AX-Rbi" firstAttribute="bottom" secondItem="uTc-l5-oP4" secondAttribute="bottom" id="5Yu-f6-LAS"/>
+                            <constraint firstItem="Vh6-AX-Rbi" firstAttribute="trailing" secondItem="uTc-l5-oP4" secondAttribute="trailing" id="UZy-4g-Fpk"/>
+                            <constraint firstItem="uTc-l5-oP4" firstAttribute="top" secondItem="oZE-0i-t0Y" secondAttribute="top" constant="20" symbolic="YES" id="VJ3-Me-s1s"/>
+                            <constraint firstItem="uTc-l5-oP4" firstAttribute="leading" secondItem="Vh6-AX-Rbi" secondAttribute="leading" id="zKK-S6-uQN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oZE-0i-t0Y"/>
                         <viewLayoutGuide key="layoutMargins" id="Vh6-AX-Rbi"/>
