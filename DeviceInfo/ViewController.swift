@@ -15,6 +15,7 @@ extension NSUserInterfaceItemIdentifier {
 
 final class ViewController: NSViewController {
     
+    @IBOutlet var outlineMenu: NSMenu!
     @IBOutlet weak var outlineView: NSOutlineView!
     
     private var connectedDevices: [ConnectedDevice]?
@@ -148,5 +149,20 @@ extension ViewController: NSOutlineViewDataSource, NSOutlineViewDelegate {
         return nil
     }
     
+}
+
+extension ViewController: NSMenuItemValidation, NSMenuDelegate {
+    
+    func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+        return true
+    }
+    
+    @IBAction func copy(_ sender: Any) {
+        
+    }
+    
+    @IBAction func copyKey(_ sender: Any) {
+        
+    }
 }
 

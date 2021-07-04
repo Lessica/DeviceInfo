@@ -713,16 +713,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uTc-l5-oP4">
-                                <rect key="frame" x="20" y="20" width="400" height="284"/>
+                                <rect key="frame" x="20" y="20" width="400" height="312"/>
                                 <subviews>
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ab-Ig-Hdo">
-                                        <rect key="frame" x="0.0" y="32" width="400" height="252"/>
-                                        <clipView key="contentView" id="RY6-1l-Vig">
-                                            <rect key="frame" x="1" y="1" width="398" height="250"/>
+                                        <rect key="frame" x="0.0" y="32" width="400" height="280"/>
+                                        <clipView key="contentView" ambiguous="YES" id="RY6-1l-Vig">
+                                            <rect key="frame" x="1" y="1" width="398" height="278"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveName="MainOutlineView" rowHeight="24" usesAutomaticRowHeights="YES" headerView="PWd-ko-TVM" viewBased="YES" indentationPerLevel="13" autosaveExpandedItems="YES" autoresizesOutlineColumn="YES" outlineTableColumn="zVJ-oy-Au4" id="W2t-uB-lcB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="222"/>
+                                                <outlineView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveName="MainOutlineView" rowHeight="24" usesAutomaticRowHeights="YES" headerView="PWd-ko-TVM" viewBased="YES" indentationPerLevel="13" autosaveExpandedItems="YES" autoresizesOutlineColumn="YES" outlineTableColumn="zVJ-oy-Au4" id="W2t-uB-lcB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="250"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="17" height="0.0"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -811,6 +811,7 @@
                                                     <connections>
                                                         <outlet property="dataSource" destination="XfG-lQ-9wD" id="ki4-Yr-TCI"/>
                                                         <outlet property="delegate" destination="XfG-lQ-9wD" id="FbG-V3-Zsl"/>
+                                                        <outlet property="menu" destination="QgQ-Rj-JLk" id="k5F-fX-5Iv"/>
                                                     </connections>
                                                 </outlineView>
                                             </subviews>
@@ -887,10 +888,29 @@
                         <viewLayoutGuide key="layoutMargins" id="Vh6-AX-Rbi"/>
                     </view>
                     <connections>
+                        <outlet property="outlineMenu" destination="QgQ-Rj-JLk" id="RUi-uh-eaF"/>
                         <outlet property="outlineView" destination="W2t-uB-lcB" id="A5q-fp-6A3"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="QgQ-Rj-JLk">
+                    <items>
+                        <menuItem title="Copy Key" id="4XX-gH-MJb">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="copyKey:" target="rPt-NT-nkU" id="Zd8-m2-J0X"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Copy Value" keyEquivalent="c" id="k3a-wJ-KC7">
+                            <connections>
+                                <action selector="copy:" target="rPt-NT-nkU" id="P3D-ss-uH1"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="XfG-lQ-9wD" id="m3E-TX-hEL"/>
+                    </connections>
+                </menu>
             </objects>
             <point key="canvasLocation" x="75" y="969"/>
         </scene>
