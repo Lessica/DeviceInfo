@@ -3,17 +3,85 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC811B162690959600CD285C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811B152690959600CD285C /* Device.swift */; };
+		CC811B9E2690A2D000CD285C /* NMSSH in Frameworks */ = {isa = PBXBuildFile; productRef = CC811B9D2690A2D000CD285C /* NMSSH */; };
+		CC811BAE2690A51500CD285C /* iproxy.c in Sources */ = {isa = PBXBuildFile; fileRef = CC811BA02690A3E700CD285C /* iproxy.c */; };
+		CC811BD12690A65600CD285C /* iproxy in Copy Embedded Tools */ = {isa = PBXBuildFile; fileRef = CC811BA72690A4F000CD285C /* iproxy */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CC811BD32690A7EC00CD285C /* libimobiledevice-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9762677BB7400CB55E9 /* libimobiledevice-1.0.a */; };
+		CC811BD42690A7EC00CD285C /* libplist-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9752677BB7400CB55E9 /* libplist-2.0.a */; };
+		CC811BD52690A7EC00CD285C /* libusbmuxd-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9772677BB7400CB55E9 /* libusbmuxd-2.0.a */; };
+		CC811BD92690AEE400CD285C /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BD82690AEE300CD285C /* GenericError.swift */; };
+		CC811BDD2690BFCE00CD285C /* DeviceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BDC2690BFCE00CD285C /* DeviceError.swift */; };
+		CC811BDF2690BFE100CD285C /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BDE2690BFE100CD285C /* Record.swift */; };
+		CC811BE12690BFF800CD285C /* FilledRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BE02690BFF800CD285C /* FilledRecord.swift */; };
+		CC811BE32690C02100CD285C /* ConnectedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BE22690C02100CD285C /* ConnectedDevice.swift */; };
+		CC811BE52690C13C00CD285C /* RecordTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BE42690C13C00CD285C /* RecordTransformer.swift */; };
+		CC811BE72690C3E300CD285C /* TransformedRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BE62690C3E300CD285C /* TransformedRecord.swift */; };
+		CC811BE92690C95B00CD285C /* AggregatedRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BE82690C95A00CD285C /* AggregatedRecord.swift */; };
+		CC811BEB2690CB5F00CD285C /* RecordTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BEA2690CB5F00CD285C /* RecordTemplate.swift */; };
 		CC96F9642677BB4E00CB55E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96F9632677BB4E00CB55E9 /* AppDelegate.swift */; };
 		CC96F9662677BB4E00CB55E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96F9652677BB4E00CB55E9 /* ViewController.swift */; };
 		CC96F9682677BB4F00CB55E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC96F9672677BB4F00CB55E9 /* Assets.xcassets */; };
 		CC96F96B2677BB4F00CB55E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC96F9692677BB4F00CB55E9 /* Main.storyboard */; };
+		CC96F97A2677BB7400CB55E9 /* libplist-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9752677BB7400CB55E9 /* libplist-2.0.a */; };
+		CC96F97B2677BB7400CB55E9 /* libimobiledevice-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9762677BB7400CB55E9 /* libimobiledevice-1.0.a */; };
+		CC96F97C2677BB7400CB55E9 /* libusbmuxd-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9772677BB7400CB55E9 /* libusbmuxd-2.0.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CC811BCD2690A63B00CD285C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC96F9582677BB4E00CB55E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC811BA62690A4F000CD285C;
+			remoteInfo = iproxy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC811BA52690A4F000CD285C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		CC811BCF2690A63D00CD285C /* Copy Embedded Tools */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = tools;
+			dstSubfolderSpec = 7;
+			files = (
+				CC811BD12690A65600CD285C /* iproxy in Copy Embedded Tools */,
+			);
+			name = "Copy Embedded Tools";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CC811B152690959600CD285C /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		CC811B1726909C6000CD285C /* newfactorydata.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = newfactorydata.sh; sourceTree = SOURCE_ROOT; };
+		CC811B9A2690A2C700CD285C /* NMSSH */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NMSSH; sourceTree = "<group>"; };
+		CC811B9B2690A2C700CD285C /* CSSH */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CSSH; sourceTree = "<group>"; };
+		CC811B9F2690A3E700CD285C /* inetcat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inetcat.c; sourceTree = "<group>"; };
+		CC811BA02690A3E700CD285C /* iproxy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iproxy.c; sourceTree = "<group>"; };
+		CC811BA72690A4F000CD285C /* iproxy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iproxy; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC811BD82690AEE300CD285C /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		CC811BDC2690BFCE00CD285C /* DeviceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceError.swift; sourceTree = "<group>"; };
+		CC811BDE2690BFE100CD285C /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		CC811BE02690BFF800CD285C /* FilledRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledRecord.swift; sourceTree = "<group>"; };
+		CC811BE22690C02100CD285C /* ConnectedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedDevice.swift; sourceTree = "<group>"; };
+		CC811BE42690C13C00CD285C /* RecordTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTransformer.swift; sourceTree = "<group>"; };
+		CC811BE62690C3E300CD285C /* TransformedRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformedRecord.swift; sourceTree = "<group>"; };
+		CC811BE82690C95A00CD285C /* AggregatedRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedRecord.swift; sourceTree = "<group>"; };
+		CC811BEA2690CB5F00CD285C /* RecordTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTemplate.swift; sourceTree = "<group>"; };
 		CC96F9602677BB4E00CB55E9 /* DeviceInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC96F9632677BB4E00CB55E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC96F9652677BB4E00CB55E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,24 +89,96 @@
 		CC96F96A2677BB4F00CB55E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC96F96C2677BB4F00CB55E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC96F96D2677BB4F00CB55E9 /* DeviceInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceInfo.entitlements; sourceTree = "<group>"; };
+		CC96F9742677BB7400CB55E9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		CC96F9752677BB7400CB55E9 /* libplist-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libplist-2.0.a"; sourceTree = "<group>"; };
+		CC96F9762677BB7400CB55E9 /* libimobiledevice-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libimobiledevice-1.0.a"; sourceTree = "<group>"; };
+		CC96F9772677BB7400CB55E9 /* libusbmuxd-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libusbmuxd-2.0.a"; sourceTree = "<group>"; };
+		CC96F9782677BB7400CB55E9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		CC96F97E2677BB8300CB55E9 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		CC96F9812677BC3200CB55E9 /* DeviceInfo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeviceInfo-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC96F9822677BC3300CB55E9 /* idevicenotificationproxy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicenotificationproxy.c; sourceTree = "<group>"; };
+		CC96F9832677BC3300CB55E9 /* idevicescreenshot.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicescreenshot.c; sourceTree = "<group>"; };
+		CC96F9842677BC3300CB55E9 /* idevicebackup2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicebackup2.c; sourceTree = "<group>"; };
+		CC96F9852677BC3300CB55E9 /* idevice_id.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevice_id.c; sourceTree = "<group>"; };
+		CC96F9862677BC3300CB55E9 /* idevicediagnostics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicediagnostics.c; sourceTree = "<group>"; };
+		CC96F9872677BC3300CB55E9 /* idevicename.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicename.c; sourceTree = "<group>"; };
+		CC96F9882677BC3300CB55E9 /* idevicecrashreport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicecrashreport.c; sourceTree = "<group>"; };
+		CC96F9892677BC3300CB55E9 /* idevicepair.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicepair.c; sourceTree = "<group>"; };
+		CC96F98A2677BC3300CB55E9 /* ideviceprovision.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ideviceprovision.c; sourceTree = "<group>"; };
+		CC96F98B2677BC3400CB55E9 /* idevicesetlocation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicesetlocation.c; sourceTree = "<group>"; };
+		CC96F98C2677BC3400CB55E9 /* ideviceimagemounter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ideviceimagemounter.c; sourceTree = "<group>"; };
+		CC96F98D2677BC3400CB55E9 /* idevicesyslog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicesyslog.c; sourceTree = "<group>"; };
+		CC96F98E2677BC3400CB55E9 /* ideviceenterrecovery.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ideviceenterrecovery.c; sourceTree = "<group>"; };
+		CC96F98F2677BC3400CB55E9 /* idevicedebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicedebug.c; sourceTree = "<group>"; };
+		CC96F9902677BC3400CB55E9 /* ideviceinfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ideviceinfo.c; sourceTree = "<group>"; };
+		CC96F9912677BC3400CB55E9 /* idevicedebugserverproxy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicedebugserverproxy.c; sourceTree = "<group>"; };
+		CC96F9922677BC3400CB55E9 /* idevicedate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicedate.c; sourceTree = "<group>"; };
+		CC96F9932677BC3400CB55E9 /* idevicebackup.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idevicebackup.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CC811BA42690A4F000CD285C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC811BD32690A7EC00CD285C /* libimobiledevice-1.0.a in Frameworks */,
+				CC811BD52690A7EC00CD285C /* libusbmuxd-2.0.a in Frameworks */,
+				CC811BD42690A7EC00CD285C /* libplist-2.0.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC96F95D2677BB4E00CB55E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC811B9E2690A2D000CD285C /* NMSSH in Frameworks */,
+				CC96F97A2677BB7400CB55E9 /* libplist-2.0.a in Frameworks */,
+				CC96F97B2677BB7400CB55E9 /* libimobiledevice-1.0.a in Frameworks */,
+				CC96F97C2677BB7400CB55E9 /* libusbmuxd-2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC811B9C2690A2D000CD285C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC811BEC2690D32700CD285C /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				CC811BDE2690BFE100CD285C /* Record.swift */,
+				CC811BE02690BFF800CD285C /* FilledRecord.swift */,
+				CC811BE62690C3E300CD285C /* TransformedRecord.swift */,
+				CC811BE82690C95A00CD285C /* AggregatedRecord.swift */,
+				CC811BEA2690CB5F00CD285C /* RecordTemplate.swift */,
+				CC811BE42690C13C00CD285C /* RecordTransformer.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
+		CC811BED2690D33800CD285C /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				CC811B152690959600CD285C /* Device.swift */,
+				CC811BDC2690BFCE00CD285C /* DeviceError.swift */,
+				CC811BE22690C02100CD285C /* ConnectedDevice.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
 		CC96F9572677BB4E00CB55E9 = {
 			isa = PBXGroup;
 			children = (
+				CC811B9B2690A2C700CD285C /* CSSH */,
+				CC811B9A2690A2C700CD285C /* NMSSH */,
 				CC96F9622677BB4E00CB55E9 /* DeviceInfo */,
 				CC96F9612677BB4E00CB55E9 /* Products */,
+				CC811B9C2690A2D000CD285C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				CC96F9602677BB4E00CB55E9 /* DeviceInfo.app */,
+				CC811BA72690A4F000CD285C /* iproxy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,8 +194,15 @@
 		CC96F9622677BB4E00CB55E9 /* DeviceInfo */ = {
 			isa = PBXGroup;
 			children = (
+				CC96F97E2677BB8300CB55E9 /* include */,
+				CC96F9732677BB7400CB55E9 /* lib */,
+				CC96F9802677BBE400CB55E9 /* tools */,
+				CC811BED2690D33800CD285C /* Device */,
+				CC811BEC2690D32700CD285C /* Records */,
 				CC96F9632677BB4E00CB55E9 /* AppDelegate.swift */,
+				CC811BD82690AEE300CD285C /* GenericError.swift */,
 				CC96F9652677BB4E00CB55E9 /* ViewController.swift */,
+				CC811B1726909C6000CD285C /* newfactorydata.sh */,
 				CC96F9672677BB4F00CB55E9 /* Assets.xcassets */,
 				CC96F9692677BB4F00CB55E9 /* Main.storyboard */,
 				CC96F96C2677BB4F00CB55E9 /* Info.plist */,
@@ -63,9 +211,66 @@
 			path = DeviceInfo;
 			sourceTree = "<group>";
 		};
+		CC96F9732677BB7400CB55E9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CC96F9742677BB7400CB55E9 /* libcrypto.a */,
+				CC96F9752677BB7400CB55E9 /* libplist-2.0.a */,
+				CC96F9762677BB7400CB55E9 /* libimobiledevice-1.0.a */,
+				CC96F9772677BB7400CB55E9 /* libusbmuxd-2.0.a */,
+				CC96F9782677BB7400CB55E9 /* libssl.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CC96F9802677BBE400CB55E9 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				CC96F9812677BC3200CB55E9 /* DeviceInfo-Bridging-Header.h */,
+				CC96F9852677BC3300CB55E9 /* idevice_id.c */,
+				CC96F9932677BC3400CB55E9 /* idevicebackup.c */,
+				CC96F9842677BC3300CB55E9 /* idevicebackup2.c */,
+				CC96F9882677BC3300CB55E9 /* idevicecrashreport.c */,
+				CC96F9922677BC3400CB55E9 /* idevicedate.c */,
+				CC96F98F2677BC3400CB55E9 /* idevicedebug.c */,
+				CC96F9912677BC3400CB55E9 /* idevicedebugserverproxy.c */,
+				CC96F9862677BC3300CB55E9 /* idevicediagnostics.c */,
+				CC96F98E2677BC3400CB55E9 /* ideviceenterrecovery.c */,
+				CC96F98C2677BC3400CB55E9 /* ideviceimagemounter.c */,
+				CC96F9902677BC3400CB55E9 /* ideviceinfo.c */,
+				CC96F9872677BC3300CB55E9 /* idevicename.c */,
+				CC96F9822677BC3300CB55E9 /* idevicenotificationproxy.c */,
+				CC96F9892677BC3300CB55E9 /* idevicepair.c */,
+				CC96F98A2677BC3300CB55E9 /* ideviceprovision.c */,
+				CC96F9832677BC3300CB55E9 /* idevicescreenshot.c */,
+				CC96F98B2677BC3400CB55E9 /* idevicesetlocation.c */,
+				CC96F98D2677BC3400CB55E9 /* idevicesyslog.c */,
+				CC811B9F2690A3E700CD285C /* inetcat.c */,
+				CC811BA02690A3E700CD285C /* iproxy.c */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CC811BA62690A4F000CD285C /* iproxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC811BAB2690A4F000CD285C /* Build configuration list for PBXNativeTarget "iproxy" */;
+			buildPhases = (
+				CC811BA32690A4F000CD285C /* Sources */,
+				CC811BA42690A4F000CD285C /* Frameworks */,
+				CC811BA52690A4F000CD285C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iproxy;
+			productName = iproxy;
+			productReference = CC811BA72690A4F000CD285C /* iproxy */;
+			productType = "com.apple.product-type.tool";
+		};
 		CC96F95F2677BB4E00CB55E9 /* DeviceInfo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC96F9702677BB4F00CB55E9 /* Build configuration list for PBXNativeTarget "DeviceInfo" */;
@@ -73,12 +278,17 @@
 				CC96F95C2677BB4E00CB55E9 /* Sources */,
 				CC96F95D2677BB4E00CB55E9 /* Frameworks */,
 				CC96F95E2677BB4E00CB55E9 /* Resources */,
+				CC811BCF2690A63D00CD285C /* Copy Embedded Tools */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CC811BCE2690A63B00CD285C /* PBXTargetDependency */,
 			);
 			name = DeviceInfo;
+			packageProductDependencies = (
+				CC811B9D2690A2D000CD285C /* NMSSH */,
+			);
 			productName = DeviceInfo;
 			productReference = CC96F9602677BB4E00CB55E9 /* DeviceInfo.app */;
 			productType = "com.apple.product-type.application";
@@ -92,8 +302,12 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					CC811BA62690A4F000CD285C = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					CC96F95F2677BB4E00CB55E9 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -111,6 +325,7 @@
 			projectRoot = "";
 			targets = (
 				CC96F95F2677BB4E00CB55E9 /* DeviceInfo */,
+				CC811BA62690A4F000CD285C /* iproxy */,
 			);
 		};
 /* End PBXProject section */
@@ -128,16 +343,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CC811BA32690A4F000CD285C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC811BAE2690A51500CD285C /* iproxy.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC96F95C2677BB4E00CB55E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC811BDF2690BFE100CD285C /* Record.swift in Sources */,
+				CC811BDD2690BFCE00CD285C /* DeviceError.swift in Sources */,
+				CC811BE72690C3E300CD285C /* TransformedRecord.swift in Sources */,
+				CC811BD92690AEE400CD285C /* GenericError.swift in Sources */,
+				CC811BE32690C02100CD285C /* ConnectedDevice.swift in Sources */,
+				CC811B162690959600CD285C /* Device.swift in Sources */,
+				CC811BE92690C95B00CD285C /* AggregatedRecord.swift in Sources */,
 				CC96F9662677BB4E00CB55E9 /* ViewController.swift in Sources */,
+				CC811BE52690C13C00CD285C /* RecordTransformer.swift in Sources */,
+				CC811BE12690BFF800CD285C /* FilledRecord.swift in Sources */,
+				CC811BEB2690CB5F00CD285C /* RecordTemplate.swift in Sources */,
 				CC96F9642677BB4E00CB55E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC811BCE2690A63B00CD285C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC811BA62690A4F000CD285C /* iproxy */;
+			targetProxy = CC811BCD2690A63B00CD285C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CC96F9692677BB4F00CB55E9 /* Main.storyboard */ = {
@@ -151,6 +392,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CC811BAC2690A4F000CD285C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GXZ23M5TP2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DeviceInfo/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC811BAD2690A4F000CD285C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GXZ23M5TP2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DeviceInfo/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CC96F96E2677BB4F00CB55E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -202,13 +471,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/$(PROJECT_NAME)/include";
 			};
 			name = Debug;
 		};
@@ -257,12 +527,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/$(PROJECT_NAME)/include";
 			};
 			name = Release;
 		};
@@ -271,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DeviceInfo/DeviceInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -281,8 +553,14 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DeviceInfo/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.darwindev.DeviceInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeviceInfo/tools/DeviceInfo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -292,6 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DeviceInfo/DeviceInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -302,8 +581,13 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DeviceInfo/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.darwindev.DeviceInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeviceInfo/tools/DeviceInfo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -311,6 +595,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC811BAB2690A4F000CD285C /* Build configuration list for PBXNativeTarget "iproxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC811BAC2690A4F000CD285C /* Debug */,
+				CC811BAD2690A4F000CD285C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CC96F95B2677BB4E00CB55E9 /* Build configuration list for PBXProject "DeviceInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -330,6 +623,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC811B9D2690A2D000CD285C /* NMSSH */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NMSSH;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC96F9582677BB4E00CB55E9 /* Project object */;
 }
