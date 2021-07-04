@@ -202,8 +202,8 @@
 /* Class = "NSMenu"; title = "Baseline"; ObjectID = "ijk-EB-dga"; */
 "ijk-EB-dga.title" = "Baseline";
 
-/* Class = "NSWindow"; title = "Device Info"; ObjectID = "IQv-IB-iLA"; */
-"IQv-IB-iLA.title" = "Device Info";
+/* Class = "NSWindow"; title = "DeviceInfo"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "DeviceInfo";
 
 /* Class = "NSMenuItem"; title = "Justify"; ObjectID = "J5U-5w-g23"; */
 "J5U-5w-g23.title" = "Justify";
@@ -414,3 +414,9 @@
 
 /* Class = "NSMenuItem"; title = "Paragraph"; ObjectID = "ZvO-Gk-QUH"; */
 "ZvO-Gk-QUH.title" = "Paragraph";
+
+/* Class = "NSMenuItem"; title = "Copy Key"; ObjectID = "4XX-gH-MJb"; */
+"4XX-gH-MJb.title" = "Copy Key";
+
+/* Class = "NSMenuItem"; title = "Copy Value"; ObjectID = "k3a-wJ-KC7"; */
+"k3a-wJ-KC7.title" = "Copy Value";
