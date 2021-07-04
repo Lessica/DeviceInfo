@@ -70,7 +70,7 @@
 
 /* Begin PBXFileReference section */
 		CC811B152690959600CD285C /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		CC811B1726909C6000CD285C /* newfactorydata.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = newfactorydata.sh; sourceTree = SOURCE_ROOT; };
+		CC811B1726909C6000CD285C /* newfactorydata.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = newfactorydata.sh; path = DeviceInfo/Resources/newfactorydata.sh; sourceTree = SOURCE_ROOT; };
 		CC811B9A2690A2C700CD285C /* NMSSH */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NMSSH; sourceTree = "<group>"; };
 		CC811B9B2690A2C700CD285C /* CSSH */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CSSH; sourceTree = "<group>"; };
 		CC811B9F2690A3E700CD285C /* inetcat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inetcat.c; sourceTree = "<group>"; };
@@ -181,6 +181,28 @@
 			path = Device;
 			sourceTree = "<group>";
 		};
+		CC811C0026918BB300CD285C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC96F96C2677BB4F00CB55E9 /* Info.plist */,
+				CC811BF626918A7A00CD285C /* Localizable.strings */,
+				CC811BFE26918AEC00CD285C /* RecordKeys.strings */,
+				CC96F9672677BB4F00CB55E9 /* Assets.xcassets */,
+				CC96F96D2677BB4F00CB55E9 /* DeviceInfo.entitlements */,
+				CC811B1726909C6000CD285C /* newfactorydata.sh */,
+				CC811BF826918AAA00CD285C /* BartyCrouch.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CC811C0126918C5200CD285C /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				CC96F9692677BB4F00CB55E9 /* Main.storyboard */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		CC96F9572677BB4E00CB55E9 = {
 			isa = PBXGroup;
 			children = (
@@ -207,19 +229,13 @@
 				CC96F97E2677BB8300CB55E9 /* include */,
 				CC96F9732677BB7400CB55E9 /* lib */,
 				CC96F9802677BBE400CB55E9 /* tools */,
+				CC811C0026918BB300CD285C /* Resources */,
 				CC811BED2690D33800CD285C /* Device */,
 				CC811BEC2690D32700CD285C /* Records */,
+				CC811C0126918C5200CD285C /* XIB */,
 				CC96F9632677BB4E00CB55E9 /* AppDelegate.swift */,
-				CC811BF826918AAA00CD285C /* BartyCrouch.swift */,
 				CC811BD82690AEE300CD285C /* GenericError.swift */,
 				CC96F9652677BB4E00CB55E9 /* ViewController.swift */,
-				CC811B1726909C6000CD285C /* newfactorydata.sh */,
-				CC96F9672677BB4F00CB55E9 /* Assets.xcassets */,
-				CC96F9692677BB4F00CB55E9 /* Main.storyboard */,
-				CC96F96C2677BB4F00CB55E9 /* Info.plist */,
-				CC96F96D2677BB4F00CB55E9 /* DeviceInfo.entitlements */,
-				CC811BF626918A7A00CD285C /* Localizable.strings */,
-				CC811BFE26918AEC00CD285C /* RecordKeys.strings */,
 			);
 			path = DeviceInfo;
 			sourceTree = "<group>";
@@ -582,12 +598,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = DeviceInfo/DeviceInfo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Resources/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GXZ23M5TP2;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = DeviceInfo/Info.plist;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -610,12 +626,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = DeviceInfo/DeviceInfo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Resources/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GXZ23M5TP2;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = DeviceInfo/Info.plist;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
