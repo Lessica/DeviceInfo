@@ -51,7 +51,7 @@
 "Unknown Model" = "未知型号";
 
 /* Message */
-"No device connected." = "";
+"No device connected." = "未连接设备。";
 
 /* TunnelError */
-"Tunnel for \"%@\" already exists." = "";
+"Tunnel for \"%@\" already exists." = "隧道 \"%@\" 已经存在。";

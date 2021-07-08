@@ -32,7 +32,7 @@
 "No available tunnel." = "No available tunnel.";
 
 /* Message */
-"No device connected." = "未连接设备。";
+"No device connected." = "No device connected.";
 
 /* Message */
 "Ready." = "Ready.";
@@ -47,7 +47,7 @@
 "Tunnel created, src = %d, dest = %d, pid = %d." = "Tunnel created, src = %d, dest = %d, pid = %d.";
 
 /* TunnelError */
-"Tunnel for \"%@\" already exists." = "隧道 \"%@\" 已经存在。";
+"Tunnel for \"%@\" already exists." = "Tunnel for \"%@\" already exists.";
 
 /* Message */
 "Tunnel terminated, pid = %d (status = %d)." = "Tunnel terminated, pid = %d (status = %d).";
