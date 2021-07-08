@@ -9,9 +9,13 @@ import Foundation
 
 @dynamicMemberLookup
 struct RecordTemplate {
+    
     var template: String
     private var data: [String: String]
-    var populatedTemplate : String { data.reduce(template) { $0.replacingOccurrences(of: "${\($1.key)}", with: $1.value) } }
+    
+    var populatedTemplate : String {
+        data.reduce(template) { $0.replacingOccurrences(of: "${\($1.key)}", with: $1.value) }
+    }
 
     init(template: String, data: [String: String] = [:]) {
         self.template = template

@@ -9,13 +9,13 @@ import Foundation
 
 class Record {
     
-    internal init(domain: String?, key: String, transformer: RecordTransformer? = nil) {
+    internal init(domain: String?, key: String, transformers: [RecordTransformer]? = nil) {
         self.domain = domain
         self.key = key
-        self.transformer = transformer
+        self.transformers = transformers
     }
     
     let domain: String?
     let key: String
-    let transformer: RecordTransformer?
+    let transformers: [RecordTransformer]?
 }

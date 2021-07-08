@@ -46,8 +46,10 @@ protocol DeviceEventHandler {
 @main
 final class AppDelegate: NSObject, NSApplicationDelegate, DeviceEventHandler {
     
+    @IBOutlet weak var tunnelsMenu: NSMenu!
+    
     // 设备列表发生变化时，应用程序内部的通知名称
-    static let connectedDevicesDidChangeNotificationName = Notification.Name("AppDelegate.ConnectedDevicesDidChange")
+    static let connectedDevicesDidChangeNotificationName = Notification.Name("\(String(describing: AppDelegate.self)).ConnectedDevicesDidChange")
     
     // 已连接的设备
     // Set 容器的特性，决定了它会对其中的 Hashable 对象自动去重
@@ -68,6 +70,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, DeviceEventHandler {
         
         // 停止订阅设备事件
         idevice_event_unsubscribe()
+        
+        // 终止并移除所有隧道
+        TunnelService.shared.removeAllTunnels()
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -124,6 +129,57 @@ final class AppDelegate: NSObject, NSApplicationDelegate, DeviceEventHandler {
         // 发送设备列表变化通知
         NotificationCenter.default.post(name: AppDelegate.connectedDevicesDidChangeNotificationName, object: nil)
     }
+    
+}
 
+extension AppDelegate: NSMenuItemValidation, NSMenuDelegate {
+
+    func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+        if menuItem.action == #selector(removeTunnel(_:)) || menuItem.action == #selector(removeAllTunnels(_:)) {
+            return true
+        }
+        return false
+    }
+    
+    func menuNeedsUpdate(_ menu: NSMenu) {
+        if menu == self.tunnelsMenu {
+            let allItems: [NSMenuItem] = TunnelService.shared.allTunnels.compactMap { tunnel in
+                let menuItem = NSMenuItem(
+                    title: "\(String(describing: tunnel.description ?? "")) (\(tunnel.udid), \(tunnel.srcPort) -> \(tunnel.dstPort))",
+                    action: #selector(removeTunnel(_:)),
+                    keyEquivalent: ""
+                )
+                menuItem.representedObject = tunnel
+                return menuItem
+            }
+            if allItems.count > 0 {
+                menu.items = allItems + [
+                    NSMenuItem.separator(),
+                    NSMenuItem(
+                        title: NSLocalizedString("Remove All Tunnels…", comment: "Menu"),
+                        action: #selector(removeAllTunnels(_:)),
+                        keyEquivalent: ""
+                    )
+                ]
+            } else {
+                menu.items = [
+                    NSMenuItem(title: NSLocalizedString("No available tunnel.", comment: "Menu"), action: nil, keyEquivalent: "")
+                ]
+            }
+        }
+    }
+    
+    @objc
+    func removeTunnel(_ sender: NSMenuItem) {
+        if let tunnel = sender.representedObject as? Tunnel {
+            TunnelService.shared.removeTunnel(udid: tunnel.udid)
+        }
+    }
+    
+    @IBAction @objc
+    func removeAllTunnels(_ sender: Any) {
+        TunnelService.shared.removeAllTunnels()
+    }
+    
 }
 

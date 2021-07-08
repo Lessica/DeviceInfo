@@ -1,1 +1,23 @@
+"[Locked]" = "[已锁定]";
 
+"BluetoothAddress" = "蓝牙 MAC 地址";
+
+"DeviceClassForDisplay" = "产品代号";
+
+"EthernetAddress" = "以太网 MAC 地址";
+
+"HardwarePlatformForDisplay" = "CPU 型号";
+
+"InternationalMobileEquipmentIdentity" = "蜂窝网络串号";
+
+"MarketingName" = "销售名称";
+
+"MobileEquipmentIdentifier" = "电信网络串号";
+
+"ModelNumberForDisplay" = "型号与地区";
+
+"ProductDescription" = "系统版本号";
+
+"SerialNumber" = "序列号";
+
+"WiFiAddress" = "无线 MAC 地址";

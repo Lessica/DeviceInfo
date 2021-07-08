@@ -1,11 +1,51 @@
+/* TunnelError */
+"%s (%d)" = "%s (%d)";
+
+/* Message */
+"All tunnels terminated." = "All tunnels terminated.";
+
+/* ConnectedDevice */
+"Connect" = "Connect";
+
+/* ConnectMenuItem */
+"Connect…" = "Connect…";
+
+/* Message */
+"Copied to pasteboard." = "Copied to pasteboard.";
+
 /* DeviceError */
-"Could not connect to lockdownd (%d)" = "";
+"Could not connect to lockdownd (%d)" = "Could not connect to lockdownd (%d)";
 
-/* GenericError */
-"Not a directory: \"%@\"." = "";
+/* Message */
+"Create tunnel to %@…" = "Create tunnel to %@…";
 
-/* GenericError */
-"Not a package: \"%@\"." = "";
+/* ConnectedDevice */
+"Disconnect: %d" = "Disconnect: %d";
 
-/* GenericError */
-"Not a regular file: \"%@\"." = "";
+/* ConnectMenuItem */
+"Disconnect…" = "Disconnect…";
+
+/* Message */
+"Loading…" = "Loading…";
+
+/* Menu */
+"No available tunnel." = "No available tunnel.";
+
+/* Message */
+"Ready." = "Ready.";
+
+/* Message */
+"Reload device list…" = "Reload device list…";
+
+/* Menu */
+"Remove All Tunnels…" = "Remove All Tunnels…";
+
+/* Message */
+"Tunnel created, src = %d, dest = %d, pid = %d." = "Tunnel created, src = %d, dest = %d, pid = %d.";
+
+/* Message */
+"Tunnel terminated, pid = %d (status = %d)." = "Tunnel terminated, pid = %d (status = %d).";
+
+/* CPUModelTransformer
+   HardwareModelTransformer */
+"Unknown Model" = "Unknown Model";

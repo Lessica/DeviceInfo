@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC307A862692E42D0045ACDE /* Tunnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC307A852692E42D0045ACDE /* Tunnel.swift */; };
+		CC307A892692E47F0045ACDE /* UppercasedRecordTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC307A882692E47F0045ACDE /* UppercasedRecordTransformer.swift */; };
+		CC307A8B2692E4930045ACDE /* LowercasedRecordTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC307A8A2692E4930045ACDE /* LowercasedRecordTransformer.swift */; };
+		CC307A8D2692E4A40045ACDE /* TimestampTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC307A8C2692E4A40045ACDE /* TimestampTransformer.swift */; };
+		CC307A8F2692E4B80045ACDE /* CPUModelTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC307A8E2692E4B80045ACDE /* CPUModelTransformer.swift */; };
+		CC307A912692E4CA0045ACDE /* HardwareModelTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC307A902692E4CA0045ACDE /* HardwareModelTransformer.swift */; };
+		CC307A932692E8140045ACDE /* TunnelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC307A922692E8140045ACDE /* TunnelService.swift */; };
+		CC7E47F32696ACAE00410951 /* TunnelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E47F22696ACAE00410951 /* TunnelError.swift */; };
+		CC7E47F52696C22400410951 /* TunnelAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E47F42696C22400410951 /* TunnelAdaptable.swift */; };
 		CC811B162690959600CD285C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811B152690959600CD285C /* Device.swift */; };
 		CC811B9E2690A2D000CD285C /* NMSSH in Frameworks */ = {isa = PBXBuildFile; productRef = CC811B9D2690A2D000CD285C /* NMSSH */; };
 		CC811BAE2690A51500CD285C /* iproxy.c in Sources */ = {isa = PBXBuildFile; fileRef = CC811BA02690A3E700CD285C /* iproxy.c */; };
@@ -14,7 +23,6 @@
 		CC811BD32690A7EC00CD285C /* libimobiledevice-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9762677BB7400CB55E9 /* libimobiledevice-1.0.a */; };
 		CC811BD42690A7EC00CD285C /* libplist-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9752677BB7400CB55E9 /* libplist-2.0.a */; };
 		CC811BD52690A7EC00CD285C /* libusbmuxd-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96F9772677BB7400CB55E9 /* libusbmuxd-2.0.a */; };
-		CC811BD92690AEE400CD285C /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BD82690AEE300CD285C /* GenericError.swift */; };
 		CC811BDD2690BFCE00CD285C /* DeviceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BDC2690BFCE00CD285C /* DeviceError.swift */; };
 		CC811BDF2690BFE100CD285C /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BDE2690BFE100CD285C /* Record.swift */; };
 		CC811BE12690BFF800CD285C /* FilledRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC811BE02690BFF800CD285C /* FilledRecord.swift */; };
@@ -69,6 +77,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC307A852692E42D0045ACDE /* Tunnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tunnel.swift; sourceTree = "<group>"; };
+		CC307A882692E47F0045ACDE /* UppercasedRecordTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercasedRecordTransformer.swift; sourceTree = "<group>"; };
+		CC307A8A2692E4930045ACDE /* LowercasedRecordTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowercasedRecordTransformer.swift; sourceTree = "<group>"; };
+		CC307A8C2692E4A40045ACDE /* TimestampTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransformer.swift; sourceTree = "<group>"; };
+		CC307A8E2692E4B80045ACDE /* CPUModelTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUModelTransformer.swift; sourceTree = "<group>"; };
+		CC307A902692E4CA0045ACDE /* HardwareModelTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareModelTransformer.swift; sourceTree = "<group>"; };
+		CC307A922692E8140045ACDE /* TunnelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelService.swift; sourceTree = "<group>"; };
+		CC7E47F22696ACAE00410951 /* TunnelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelError.swift; sourceTree = "<group>"; };
+		CC7E47F42696C22400410951 /* TunnelAdaptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelAdaptable.swift; sourceTree = "<group>"; };
 		CC811B152690959600CD285C /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		CC811B1726909C6000CD285C /* newfactorydata.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = newfactorydata.sh; path = DeviceInfo/Resources/newfactorydata.sh; sourceTree = SOURCE_ROOT; };
 		CC811B9A2690A2C700CD285C /* NMSSH */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NMSSH; sourceTree = "<group>"; };
@@ -76,7 +93,6 @@
 		CC811B9F2690A3E700CD285C /* inetcat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inetcat.c; sourceTree = "<group>"; };
 		CC811BA02690A3E700CD285C /* iproxy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iproxy.c; sourceTree = "<group>"; };
 		CC811BA72690A4F000CD285C /* iproxy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iproxy; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC811BD82690AEE300CD285C /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
 		CC811BDC2690BFCE00CD285C /* DeviceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceError.swift; sourceTree = "<group>"; };
 		CC811BDE2690BFE100CD285C /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		CC811BE02690BFF800CD285C /* FilledRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledRecord.swift; sourceTree = "<group>"; };
@@ -151,6 +167,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC307A842692E3BB0045ACDE /* Tunnel */ = {
+			isa = PBXGroup;
+			children = (
+				CC307A852692E42D0045ACDE /* Tunnel.swift */,
+				CC7E47F22696ACAE00410951 /* TunnelError.swift */,
+				CC307A922692E8140045ACDE /* TunnelService.swift */,
+				CC7E47F42696C22400410951 /* TunnelAdaptable.swift */,
+			);
+			path = Tunnel;
+			sourceTree = "<group>";
+		};
+		CC307A872692E45F0045ACDE /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				CC307A882692E47F0045ACDE /* UppercasedRecordTransformer.swift */,
+				CC307A8A2692E4930045ACDE /* LowercasedRecordTransformer.swift */,
+				CC307A8C2692E4A40045ACDE /* TimestampTransformer.swift */,
+				CC307A8E2692E4B80045ACDE /* CPUModelTransformer.swift */,
+				CC307A902692E4CA0045ACDE /* HardwareModelTransformer.swift */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
 		CC811B9C2690A2D000CD285C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +200,7 @@
 		CC811BEC2690D32700CD285C /* Records */ = {
 			isa = PBXGroup;
 			children = (
+				CC307A872692E45F0045ACDE /* Transformers */,
 				CC811BDE2690BFE100CD285C /* Record.swift */,
 				CC811BE02690BFF800CD285C /* FilledRecord.swift */,
 				CC811BE62690C3E300CD285C /* TransformedRecord.swift */,
@@ -231,10 +271,10 @@
 				CC96F9802677BBE400CB55E9 /* tools */,
 				CC811C0026918BB300CD285C /* Resources */,
 				CC811BED2690D33800CD285C /* Device */,
+				CC307A842692E3BB0045ACDE /* Tunnel */,
 				CC811BEC2690D32700CD285C /* Records */,
 				CC811C0126918C5200CD285C /* XIB */,
 				CC96F9632677BB4E00CB55E9 /* AppDelegate.swift */,
-				CC811BD82690AEE300CD285C /* GenericError.swift */,
 				CC96F9652677BB4E00CB55E9 /* ViewController.swift */,
 			);
 			path = DeviceInfo;
@@ -389,14 +429,22 @@
 			files = (
 				CC811BDF2690BFE100CD285C /* Record.swift in Sources */,
 				CC811BDD2690BFCE00CD285C /* DeviceError.swift in Sources */,
+				CC307A8F2692E4B80045ACDE /* CPUModelTransformer.swift in Sources */,
+				CC307A932692E8140045ACDE /* TunnelService.swift in Sources */,
 				CC811BE72690C3E300CD285C /* TransformedRecord.swift in Sources */,
-				CC811BD92690AEE400CD285C /* GenericError.swift in Sources */,
 				CC811BF926918AAB00CD285C /* BartyCrouch.swift in Sources */,
 				CC811BE32690C02100CD285C /* ConnectedDevice.swift in Sources */,
 				CC811B162690959600CD285C /* Device.swift in Sources */,
+				CC307A912692E4CA0045ACDE /* HardwareModelTransformer.swift in Sources */,
+				CC307A892692E47F0045ACDE /* UppercasedRecordTransformer.swift in Sources */,
+				CC7E47F32696ACAE00410951 /* TunnelError.swift in Sources */,
+				CC307A8B2692E4930045ACDE /* LowercasedRecordTransformer.swift in Sources */,
+				CC7E47F52696C22400410951 /* TunnelAdaptable.swift in Sources */,
 				CC811BE92690C95B00CD285C /* AggregatedRecord.swift in Sources */,
 				CC96F9662677BB4E00CB55E9 /* ViewController.swift in Sources */,
 				CC811BE52690C13C00CD285C /* RecordTransformer.swift in Sources */,
+				CC307A862692E42D0045ACDE /* Tunnel.swift in Sources */,
+				CC307A8D2692E4A40045ACDE /* TimestampTransformer.swift in Sources */,
 				CC811BE12690BFF800CD285C /* FilledRecord.swift in Sources */,
 				CC811BEB2690CB5F00CD285C /* RecordTemplate.swift in Sources */,
 				CC96F9642677BB4E00CB55E9 /* AppDelegate.swift in Sources */,

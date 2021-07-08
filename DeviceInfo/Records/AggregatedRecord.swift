@@ -8,6 +8,7 @@
 import Foundation
 
 final class AggregatedRecord: TransformedRecord {
+    
     internal init(
         transformedRecord: TransformedRecord
     ) {
@@ -24,22 +25,29 @@ final class AggregatedRecord: TransformedRecord {
         key: String,
         template: String,
         transformedRecords: [TransformedRecord],
-        transformer: RecordTransformer? = nil
+        transformers: [RecordTransformer]? = nil
     ) {
         let template = RecordTemplate(
             template: template,
-            data: Dictionary(uniqueKeysWithValues: transformedRecords.map({ ($0.key, $0.transformedValue) }))
+            data: Dictionary(
+                uniqueKeysWithValues:
+                    transformedRecords.map({ ($0.key, $0.transformedValue) }) +
+                    transformedRecords.map({ ("_" + $0.key, $0.value) })
+            )
         )
         self.template = template
-        let finalVal = transformer?.transform(value: template.populatedTemplate) ?? template.populatedTemplate
+        var transformedValue = template.populatedTemplate
+        transformers?.forEach({ transformedValue = $0.transform(value: transformedValue) })
+        let finalVal = transformedValue
         super.init(
             domain: nil,
             key: key,
             value: finalVal,
             transformedValue: finalVal,
-            transformer: transformer
+            transformers: transformers
         )
     }
     
     let template: RecordTemplate?
+    var associatedTunnel: Tunnel? = nil
 }

@@ -1,1 +1,23 @@
+"[Locked]" = "[Locked]";
 
+"BluetoothAddress" = "Bluetooth Address";
+
+"DeviceClassForDisplay" = "Device Class";
+
+"EthernetAddress" = "Ethernet Address";
+
+"HardwarePlatformForDisplay" = "Hardware Platform";
+
+"InternationalMobileEquipmentIdentity" = "IMEI";
+
+"MarketingName" = "Marketing Name";
+
+"MobileEquipmentIdentifier" = "MEID";
+
+"ModelNumberForDisplay" = "Model Number (Region)";
+
+"ProductDescription" = "System Version";
+
+"SerialNumber" = "Serial Number";
+
+"WiFiAddress" = "WiFi Address";

@@ -12,6 +12,7 @@ final class ConnectedDevice: Device {
     private let internalLock: NSLock
     private let internalDevice: idevice_t
     private var lockdowndService: lockdownd_client_t?
+    internal var associatedTunnel: Tunnel?
     
     override init?(connectionType: ConnectionType, udid: String) {
         var device: idevice_t?
@@ -79,18 +80,18 @@ final class ConnectedDevice: Device {
             Record(domain: nil, key: "ProductVersion"),
             Record(domain: nil, key: "ProductName"),
             Record(domain: nil, key: "BuildVersion"),
-            Record(domain: nil, key: "TimeIntervalSince1970",   transformer: .timestamp),
+            Record(domain: nil, key: "TimeIntervalSince1970",   transformers: [.timestamp]),
             Record(domain: nil, key: "InternationalMobileEquipmentIdentity"),
             Record(domain: nil, key: "MobileEquipmentIdentifier"),
             Record(domain: nil, key: "ModelNumber"),
             Record(domain: nil, key: "ProductType"),
             Record(domain: nil, key: "RegionInfo"),
-            Record(domain: nil, key: "WiFiAddress",             transformer: .uppercased),
-            Record(domain: nil, key: "BluetoothAddress",        transformer: .uppercased),
-            Record(domain: nil, key: "EthernetAddress",         transformer: .uppercased),
+            Record(domain: nil, key: "WiFiAddress",             transformers: [.uppercased]),
+            Record(domain: nil, key: "BluetoothAddress",        transformers: [.uppercased]),
+            Record(domain: nil, key: "EthernetAddress",         transformers: [.uppercased]),
             Record(domain: nil, key: "DeviceName"),
-            Record(domain: nil, key: "HardwarePlatform",        transformer: .uppercased),
-            Record(domain: nil, key: "HardwareModel"),
+            Record(domain: nil, key: "HardwarePlatform",        transformers: [.uppercased, .cpuModel]),
+            Record(domain: nil, key: "HardwareModel",           transformers: [.hardwareModel]),
             Record(domain: nil, key: "CPUArchitecture"),
         ]
     }
@@ -145,9 +146,9 @@ final class ConnectedDevice: Device {
         return filledRecords
     }
     
-    private func getTransformedRecords() throws -> [TransformedRecord] {
+    private func getTransformedRecords() throws -> [String: TransformedRecord] {
         let filledRecords = try getFilledRecords()
-        return filledRecords.map({ TransformedRecord(record: $0) })
+        return Dictionary(uniqueKeysWithValues: filledRecords.map({ ($0.key, TransformedRecord(record: $0)) }))
     }
     
     lazy var aggregatedRecords: [AggregatedRecord]? = {
@@ -156,7 +157,72 @@ final class ConnectedDevice: Device {
     
     private func getAggregatedRecords() throws -> [AggregatedRecord] {
         let transformedRecords = try getTransformedRecords()
-        return transformedRecords.map({ AggregatedRecord(transformedRecord: $0) })
+        guard transformedRecords.count > 0 else {
+            return []
+        }
+        let referenceRecords = transformedRecords.map({ $0.value })
+        var aggreatedRecords =  [
+            AggregatedRecord(
+                key: "MarketingName",
+                template: "${HardwareModel}",
+                transformedRecords: referenceRecords
+            ),
+            AggregatedRecord(
+                key: "DeviceClassForDisplay",
+                template: "${ProductType} (${_HardwareModel})",
+                transformedRecords: referenceRecords
+            ),
+        ]
+        aggreatedRecords += [
+            AggregatedRecord(
+                key: "HardwarePlatformForDisplay",
+                template: "${HardwarePlatform} (${_HardwarePlatform})",
+                transformedRecords: referenceRecords
+            ),
+            AggregatedRecord(
+                key: "ModelNumberForDisplay",
+                template: "${ModelNumber} (${RegionInfo})",
+                transformedRecords: referenceRecords
+            ),
+        ]
+        if let record = transformedRecords["SerialNumber"] {
+            aggreatedRecords += [
+                AggregatedRecord(transformedRecord: record)
+            ]
+        }
+        if let record = transformedRecords["WiFiAddress"] {
+            aggreatedRecords += [
+                AggregatedRecord(transformedRecord: record)
+            ]
+        }
+        if let record = transformedRecords["BluetoothAddress"] {
+            aggreatedRecords += [
+                AggregatedRecord(transformedRecord: record)
+            ]
+        }
+        if let record = transformedRecords["EthernetAddress"] {
+            aggreatedRecords += [
+                AggregatedRecord(transformedRecord: record)
+            ]
+        }
+        if let record = transformedRecords["InternationalMobileEquipmentIdentity"] {
+            aggreatedRecords += [
+                AggregatedRecord(transformedRecord: record)
+            ]
+        }
+        if let record = transformedRecords["MobileEquipmentIdentifier"] {
+            aggreatedRecords += [
+                AggregatedRecord(transformedRecord: record)
+            ]
+        }
+        aggreatedRecords += [
+            AggregatedRecord(
+                key: "ProductDescription",
+                template: "${ProductName} ${ProductVersion} Build ${BuildVersion}",
+                transformedRecords: referenceRecords
+            )
+        ]
+        return aggreatedRecords
     }
     
     deinit {

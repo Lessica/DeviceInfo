@@ -1,11 +1,51 @@
+/* TunnelError */
+"%s (%d)" = "%s (%d)";
+
+/* Message */
+"All tunnels terminated." = "已终止所有隧道。";
+
+/* ConnectedDevice */
+"Connect" = "连接";
+
+/* ConnectMenuItem */
+"Connect…" = "连接…";
+
+/* Message */
+"Copied to pasteboard." = "已拷贝至剪贴板。";
+
 /* DeviceError */
-"Could not connect to lockdownd (%d)" = "";
+"Could not connect to lockdownd (%d)" = "无法连接到 lockdownd (%d)";
 
-/* GenericError */
-"Not a directory: \"%@\"." = "";
+/* Message */
+"Create tunnel to %@…" = "正在建立隧道至 %@…";
 
-/* GenericError */
-"Not a package: \"%@\"." = "";
+/* ConnectedDevice */
+"Disconnect: %d" = "断开: %d";
 
-/* GenericError */
-"Not a regular file: \"%@\"." = "";
+/* ConnectMenuItem */
+"Disconnect…" = "断开连接…";
+
+/* Message */
+"Loading…" = "载入中…";
+
+/* Menu */
+"No available tunnel." = "无可用隧道。";
+
+/* Message */
+"Ready." = "准备就绪。";
+
+/* Message */
+"Reload device list…" = "重新载入设备列表…";
+
+/* Menu */
+"Remove All Tunnels…" = "移除所有隧道…";
+
+/* Message */
+"Tunnel created, src = %d, dest = %d, pid = %d." = "隧道已建立，源端口为 %d，目标端口为 %d，进程号为 %d。";
+
+/* Message */
+"Tunnel terminated, pid = %d (status = %d)." = "隧道已终止，进程号为 %d （状态码为 %d）。";
+
+/* CPUModelTransformer
+   HardwareModelTransformer */
+"Unknown Model" = "未知型号";
