@@ -32,6 +32,9 @@
 "No available tunnel." = "No available tunnel.";
 
 /* Message */
+"No device connected." = "未连接设备。";
+
+/* Message */
 "Ready." = "Ready.";
 
 /* Message */
@@ -43,9 +46,12 @@
 /* Message */
 "Tunnel created, src = %d, dest = %d, pid = %d." = "Tunnel created, src = %d, dest = %d, pid = %d.";
 
+/* TunnelError */
+"Tunnel for \"%@\" already exists." = "隧道 \"%@\" 已经存在。";
+
 /* Message */
 "Tunnel terminated, pid = %d (status = %d)." = "Tunnel terminated, pid = %d (status = %d).";
 
 /* CPUModelTransformer
    HardwareModelTransformer */
-"Unknown Model" = "Unknown Model";
+"Unknown Model" = "Unknown Model"

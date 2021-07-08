@@ -86,7 +86,11 @@ final class ViewController: NSViewController {
             }
             
             self.refreshButton.isEnabled = true
-            self.messageLabel.stringValue = NSLocalizedString("Ready.", comment: "Message")
+            if !(self.connectedDevices?.isEmpty ?? true) {
+                self.messageLabel.stringValue = NSLocalizedString("Ready.", comment: "Message")
+            } else {
+                self.messageLabel.stringValue = NSLocalizedString("No device connected.", comment: "Message")
+            }
         }
     }
     

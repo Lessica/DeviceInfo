@@ -49,3 +49,9 @@
 /* CPUModelTransformer
    HardwareModelTransformer */
 "Unknown Model" = "未知型号";
+
+/* Message */
+"No device connected." = "";
+
+/* TunnelError */
+"Tunnel for \"%@\" already exists." = "";
